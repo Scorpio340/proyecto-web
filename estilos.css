@@ -1,0 +1,294 @@
+/* ============================================
+   ACADEMIA WEB - Estilos externos (estilos.css)
+   ============================================ */
+
+/* ---- Variables globales ---- */
+:root {
+    --color-primario: #1a73e8;
+    --color-secundario: #0d47a1;
+    --color-acento: #ff6f00;
+    --color-fondo: #f4f6fb;
+    --color-texto: #222;
+    --color-footer: #1a237e;
+    --fuente-principal: Georgia, 'Times New Roman', serif;
+}
+
+/* ---- Reset básico ---- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* ---- Body ---- */
+body {
+    font-family: var(--fuente-principal);
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    line-height: 1.7;
+    padding: 0;
+}
+
+/* ---- HEADER ---- */
+header {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+header img[alt="logotipo"] {
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+header strong {
+    font-size: 1.2em;
+    flex: 1;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.9em;
+    transition: opacity 0.2s;
+}
+
+header a:hover {
+    opacity: 0.8;
+    text-decoration: underline;
+}
+
+/* ---- NAVEGACIÓN (ul) ---- */
+ul {
+    list-style: none;
+    background-color: var(--color-secundario);
+    display: flex;
+    gap: 0;
+    padding: 0;
+    margin: 0;
+}
+
+ul li a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px 22px;
+    font-size: 0.95em;
+    letter-spacing: 0.5px;
+    transition: background-color 0.2s;
+}
+
+ul li a:hover {
+    background-color: var(--color-acento);
+}
+
+/* ---- MAIN ---- */
+main {
+    padding: 30px 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ---- Artículos ---- */
+article {
+    margin-bottom: 30px;
+}
+
+article h1 {
+    color: var(--color-secundario);
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    border-left: 5px solid var(--color-acento);
+    padding-left: 10px;
+}
+
+article p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+article img {
+    border-radius: 8px;
+    border: 2px solid #c5cae9;
+    margin: 10px 5px;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #c5cae9;
+    margin: 25px 0;
+}
+
+/* ---- TABLAS ---- */
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 0.95em;
+}
+
+th, td {
+    border: 1px solid #90a4ae;
+    padding: 10px 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: var(--color-primario);
+    color: white;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #e8eaf6;
+}
+
+tbody tr:hover {
+    background-color: #bbdefb;
+}
+
+tfoot td {
+    background-color: var(--color-secundario);
+    color: white;
+    font-weight: bold;
+}
+
+/* ---- FORMULARIO ---- */
+form {
+    background-color: white;
+    padding: 25px 30px;
+    border-radius: 10px;
+    border: 1px solid #c5cae9;
+    max-width: 600px;
+}
+
+form div {
+    margin-bottom: 16px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: var(--color-secundario);
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #90a4ae;
+    border-radius: 5px;
+    font-size: 0.95em;
+    font-family: var(--fuente-principal);
+    background-color: #f9f9ff;
+    transition: border-color 0.2s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+    border-color: var(--color-primario);
+    outline: none;
+}
+
+form input[type="radio"],
+form input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: var(--color-primario);
+}
+
+form input[type="range"] {
+    width: 100%;
+    accent-color: var(--color-acento);
+}
+
+form button[type="submit"] {
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 11px 30px;
+    border-radius: 6px;
+    font-size: 1em;
+    cursor: pointer;
+    font-family: var(--fuente-principal);
+    transition: background-color 0.2s;
+}
+
+form button[type="submit"]:hover {
+    background-color: #e65100;
+}
+
+/* ---- IFRAME (ubicacion) ---- */
+iframe {
+    border: 3px solid var(--color-primario);
+    border-radius: 8px;
+    margin-top: 15px;
+    max-width: 100%;
+}
+
+/* ---- ASIDE ---- */
+aside {
+    background-color: #e8eaf6;
+    border-left: 5px solid var(--color-primario);
+    padding: 20px 30px;
+    margin: 0 40px 20px 40px;
+    border-radius: 0 8px 8px 0;
+    font-size: 0.95em;
+    line-height: 2;
+}
+
+aside strong {
+    color: var(--color-secundario);
+    font-size: 1.05em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+/* ---- FOOTER ---- */
+footer {
+    background-color: var(--color-footer);
+    color: #e8eaf6;
+    text-align: center;
+    padding: 20px 30px;
+    font-size: 0.9em;
+    line-height: 2;
+    margin-top: 20px;
+}
+
+/* ---- Modalidad en línea ---- */
+.modalidad-opciones {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.modalidad-opciones label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
+
+/* ---- Checkbox en línea ---- */
+.check-linea {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.check-linea label {
+    display: inline;
+    font-weight: normal;
+    margin-bottom: 0;
+}
